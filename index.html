@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Продажа звёзд — демо</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f6f6f6;
+      --dark:#2b2b2b;
+      --accent:#ff6b3d;
+      --accent-2:#f7c948;
+      --muted:#9b9b9b;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, Arial, sans-serif;background:var(--bg);color:var(--dark)}
+    .topbar{background:#333;color:#fff;padding:14px 28px;position:fixed;left:0;right:0;top:0;z-index:30}
+    .container{max-width:1200px;margin:0 auto;padding:120px 20px 60px}
+    .nav{display:flex;gap:22px;align-items:center}
+    .nav a{color:#ddd;text-decoration:none;font-weight:600}
+    .cta{margin-left:auto;background:var(--accent);padding:10px 18px;border-radius:26px;color:#fff;font-weight:700}
+
+    .layout{display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:start}
+
+    /* left column mockup */
+    .mockup{background:#08143a;border-radius:6px;padding:28px;box-shadow:0 8px 30px rgba(6,10,34,0.45)}
+    .hero{height:520px;background:linear-gradient(180deg,#0b2b5a 0%,#08143a 50%);border-radius:6px;position:relative;overflow:hidden}
+    .hero .title{color:#38f3e0;font-weight:800;font-size:46px;padding:36px 40px 0;}
+    .hero .subtitle{color:#fff;margin:18px 40px;font-weight:500}
+    .thumbs{display:flex;gap:10px;padding:18px}
+    .thumb{flex:1;height:86px;background:#fff;border-radius:8px;overflow:hidden}
+    .screenshot{width:100%;height:100%;object-fit:cover;display:block}
+
+    /* right column */
+    .panel{background:#fff;border-radius:10px;padding:26px;box-shadow:0 10px 28px rgba(14,18,30,0.06)}
+    .panel h2{margin:4px 0 12px;font-size:28px}
+    .link{color:var(--muted);text-decoration:underline;font-size:14px}
+    .list{padding:0;margin:18px 0 14px}
+    .list li{list-style:none;padding:10px 0;border-bottom:1px solid #f4f4f4;display:flex}
+    .list li:before{content:"";display:inline-block;width:28px;height:28px;background:var(--accent-2);border-radius:50%;margin-right:12px}
+
+    .icons{display:flex;gap:10px;margin:16px 0}
+    .icon{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--accent-2)}
+
+    .cta-block{margin-top:20px}
+    .btn-outline{display:inline-block;padding:12px 18px;border-radius:26px;border:2px solid var(--accent-2);font-weight:700;text-decoration:none;color:var(--dark)}
+
+    .book{position:fixed;right:28px;bottom:120px;width:84px}
+
+    /* cookie bar */
+    .cookie{position:fixed;left:0;right:0;bottom:0;background:rgba(15,15,20,0.9);color:#fff;padding:14px 20px;display:flex;align-items:center;gap:12px;z-index:50}
+    .cookie .close{margin-left:auto;background:transparent;border:2px solid #dfb26b;padding:8px 12px;border-radius:6px;color:#fff}
+
+    /* responsive */
+    @media(max-width:960px){
+      .layout{grid-template-columns:1fr;}
+      .container{padding:100px 16px 60px}
+      .hero{height:420px}
+      .panel{position:relative}
+      .book{display:none}
+    }
+
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="nav container">
+      <div style="font-weight:800">Haku</div>
+      <a href="#">Сайты</a>
+      <a href="#">Продвижение</a>
+      <a href="#">Реклама</a>
+      <a href="#">Поддержка</a>
+      <a href="#">Маркетплейсы</a>
+      <a class="cta" href="#">ЗАКАЗАТЬ УСЛУГИ</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="layout">
+      <div>
+        <div class="mockup">
+          <div class="hero">
+            <div class="title">Это просто космос</div>
+            <div class="subtitle">Космические технологии, меняющие мир</div>
+            <!-- large illustrative area (replace with real image) -->
+            <img src="https://via.placeholder.com/820x320/0b2b5a/ffffff?text=Hero+image" alt="hero" style="width:100%;border-radius:6px;position:absolute;left:0;bottom:0" />
+          </div>
+          <div class="thumbs">
+            <div class="thumb"><img class="screenshot" src="https://via.placeholder.com/240x86" alt="thumb1"></div>
+            <div class="thumb"><img class="screenshot" src="https://via.placeholder.com/240x86" alt="thumb2"></div>
+            <div class="thumb"><img class="screenshot" src="https://via.placeholder.com/240x86" alt="thumb3"></div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="panel">
+        <a class="link" href="#">https://test.tabtabus.ru</a>
+        <h2>Какие велись работы?</h2>
+        <ul class="list">
+          <li>Разработка и верстка адаптивных дизайн-макетов</li>
+          <li>Подключение системы управления сайтом Tilda</li>
+          <li>Добавление анимации на сайт</li>
+          <li>Настройка сайта и наполнение контентом от заказчика</li>
+          <li>Публикация сайта-визитки на хостинге</li>
+          <li>Регион разработки сайта: Москва</li>
+        </ul>
+
+        <div class="icons">
+          <div class="icon">&lt;/&gt;</div>
+          <div class="icon">{ }</div>
+          <div class="icon">🔍</div>
+          <div class="icon">📱</div>
+          <div class="icon">📝</div>
+        </div>
+
+        <h3>Понравилось? Закажите подобное решение</h3>
+        <div class="cta-block">
+          <a class="btn-outline" href="#">ОТПРАВИТЬ ЗАЯВКУ МЕНЕДЖЕРУ</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <img class="book" src="https://via.placeholder.com/84x120/ffd88a/333333?text=PRO+%0AСАЙТЫ" alt="book">
+
+  <div class="cookie">
+    <div>Используя сайт, вы соглашаетесь с тем, что мы можем хранить куки (cookies) вашего браузера.</div>
+    <button class="close">Закрыть</button>
+  </div>
+
+  <script>
+    document.querySelector('.close').addEventListener('click', ()=>{
+      document.querySelector('.cookie').style.display='none'
+    })
+  </script>
+</body>
+</html>
